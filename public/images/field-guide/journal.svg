@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420">
+  <defs>
+    <pattern id="fibers" width="47" height="43" patternUnits="userSpaceOnUse"><path d="M3 6l3 1m15 10 2-1m13 16 4-2M6 34l2 1m24-29 3-1M15 24l1 1M43 14l1 1m-25 24 2 1" stroke="#504b39" stroke-width=".75" opacity=".30"/><path d="m11 13 4-1m17 8 3 1M7 26l3 2m17 7 3-1m9 5 2 1" stroke="#fffdf6" stroke-width="1.3" opacity=".8"/></pattern>
+  </defs>
+  <path fill="#e7e5d7" d="M0 0h640v420H0z"/>
+  <path fill="#dcd7be" d="M0 302q71-20 160-14t165 2q105-14 219 0l96 8v122H0z"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path fill="#a6a28c" opacity=".48" d="m123 126 371-55 55 230-381 66z"/><path fill="#294C3B" d="m112 115 390-45 42 236-383 52z"/><path fill="#cbbd9f" d="m126 105 366-31 42 223-368 51z"/><path fill="#efe4cb" d="M127 103q100-37 184-7l41 218q-109-25-186 22z"/><path fill="#F8F5ED" d="M311 96q89-48 177-37l42 228q-105 4-178 27z"/><path d="m312 98 40 216m-180 25q79-43 179-16 89-27 173-28" stroke="#b6a486" stroke-width="2" fill="none"/><path d="M155 129q79-24 136-7m-132 23q76-25 135-8m-132 24q75-24 136-8m-133 24q77-24 135-9m-131 25q77-23 135-8m-133 24q79-23 136-9m-133 25q78-23 136-9m-132 25q78-22 135-9m-131 25q74-22 133-9m-130 25q74-23 134-10m-132 26q74-23 134-10m-131 27q65-24 134-12" fill="none" stroke="#b9b097" stroke-width="1.5"/><path d="M357 135q8-15 11-8l-1 6q7-9 14-8l-2 5q10-7 16-7m-35 37q10-17 15-10l-2 9q13-14 18-8l-2 4q9-8 18-8m-42 36q7-12 14-9l-1 6q12-10 16-8m28-49 34-8m-27 26 31-7" fill="none" stroke="#647d6d" stroke-width="2"/><path fill="#CF9075" d="m403 290 23-5 9 74-12-15-10 16z"/>
+  </g>
+  <path fill="url(#fibers)" d="M0 0h640v420H0z"/>
+</svg>

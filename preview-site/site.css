@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Fraunces Field';
+  src: url('./fonts/fraunces-latin-wght-normal.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root {
+  --cream: #f8f5ed; --paper: #fffdf7; --ink: #263d31; --forest: #294c3b;
+  --quiet: #546659; --edge: #d6d7c8; --wash: #e6ede0; --accent: #89533c;
+  --display: 'Fraunces Field', Georgia, serif;
+  --gutter: clamp(1rem, 4vw, 3.5rem);
+  color: var(--ink); background: var(--cream);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html[lang=zh-Hans] { --display: 'Songti SC', STSong, 'Noto Serif CJK SC', SimSun, serif; }
+body { margin: 0; font: 1rem/1.6 system-ui, sans-serif; }
+html[lang=zh-Hans] body { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; line-height: 1.68; }
+h1, h2, h3, p, figure { margin: 0; }
+a { color: inherit; }
+a:focus-visible { outline: 3px solid #85513d; outline-offset: 4px; }
+.wrap { width: min(100% - 2 * var(--gutter), 74rem); margin-inline: auto; }
+.skip { position: fixed; z-index: 2; inset: .5rem auto auto .5rem; clip-path: inset(50%); background: var(--paper); padding: .65rem 1rem; }
+.skip:focus { clip-path: none; }
+.site-head { border-bottom: 1px solid var(--edge); }
+.head-inner { display: flex; align-items: center; justify-content: space-between; min-height: 4.5rem; gap: .5rem 1.25rem; flex-wrap: wrap; }
+.brand { display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; color: var(--forest); font: 650 clamp(1.18rem, 2.5vw, 1.63rem)/1.1 'Fraunces Field', Georgia, serif; text-decoration: none; letter-spacing: -.05em; }
+.brand img { border-radius: .68rem; flex: 0 0 auto; }
+.brand i { font-style: normal; color: var(--accent); }
+.languages { display: flex; gap: .45rem 1rem; flex-wrap: wrap; }
+.languages a { display: inline-flex; align-items: center; min-height: 44px; font-size: .9rem; font-weight: 650; text-underline-offset: .32em; text-decoration-thickness: 1px; }
+.languages a[aria-current] { text-decoration: none; }
+.cover { display: grid; align-items: center; gap: clamp(1.5rem, 5vw, 4.5rem); padding-block: clamp(2.25rem, 7vw, 5.3rem); }
+.cover > * { min-width: 0; }
+.label { display: flex; align-items: center; gap: .55rem; color: var(--forest); font-size: .75rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+.label span { width: .65rem; height: .65rem; border-radius: 50%; background: #cf9075; flex: 0 0 auto; }
+h1 { font: 620 clamp(2.6rem, 5.8vw, 5.15rem)/1 var(--display); letter-spacing: -.055em; margin-block: .2em .32em; }
+h1 em { display: block; font-weight: 540; font-style: normal; color: var(--accent); }
+html[lang=zh-Hans] :is(h1,h2,h3,.label) { letter-spacing: 0; }
+html[lang=zh-Hans] h1 { line-height: 1.13; }
+.intro { max-width: 35ch; color: var(--quiet); font-size: clamp(1rem, 1.45vw, 1.17rem); }
+.primary { display: inline-flex; align-items: center; gap: .65rem; min-height: 46px; padding: .55rem .9rem; margin-block-start: 1.25rem; border-radius: .55rem; background: var(--forest); color: var(--paper); font-weight: 700; text-decoration: none; }
+.primary:hover { background: #1e3b2c; }
+figure img { display: block; width: 100%; height: auto; border-radius: 17% 30% .3rem .3rem; }
+figcaption { margin-top: .45rem; color: var(--quiet); font-size: .73rem; font-weight: 650; }
+.plans { background: var(--wash); padding-block: clamp(2rem, 5vw, 3.75rem); }
+h2 { font: 580 clamp(1.65rem, 3.4vw, 2.85rem)/1.15 var(--display); letter-spacing: -.035em; }
+.features, .notices { display: grid; gap: 1.4rem clamp(1.4rem, 5vw, 4.75rem); }
+.features { margin-top: 1.15rem; }
+.features article { border-top: 1px solid #a8b7a2; padding-top: .85rem; }
+.number { font-weight: 750; font-size: .76rem; color: var(--accent); }
+h3 { font: 610 clamp(1.25rem, 2.3vw, 1.6rem)/1.2 var(--display); margin-block: .15rem .3rem; }
+.features p:not(.number), .notices p { max-width: 52ch; color: var(--quiet); }
+.notices { padding-block: clamp(2rem, 5vw, 3.75rem); }
+.notices h2 { font-size: clamp(1.35rem, 2.4vw, 1.9rem); margin-bottom: .45rem; }
+footer { background: var(--forest); color: var(--cream); padding-block: 1.2rem; }
+.footer-inner { display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem 1.25rem; font-size: .9rem; }
+.footer-inner b { font-family: 'Fraunces Field', Georgia, serif; font-size: 1.2rem; }
+.footer-inner p { color: #f5d99f; }
+@media (min-width: 44rem) {
+  .cover { grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); }
+  .features, .notices { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
