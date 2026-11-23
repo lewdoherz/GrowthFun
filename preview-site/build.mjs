@@ -7,30 +7,30 @@ const locales = {
   en: {
     skip: 'Skip to content', languages: 'Language', status: 'In development · informational preview',
     title: 'Play a little.', accent: 'Grow together.',
-    intro: 'Play & Grow is a companion in development for parents and caregivers of children from birth through age five.',
-    description: 'A planned bilingual play and development companion for caregivers. This is an informational preview, not the app.',
-    cta: 'What we’re building', figure: 'Play & Grow · Field notes',
+    intro: 'GrowthFun is a companion in development for parents and caregivers of children from birth through age five.',
+    description: 'GrowthFun is a planned bilingual play and development companion for caregivers. This informational preview is not the app.',
+    cta: 'What we’re building', figure: 'GrowthFun · Field notes',
     plans: 'What we’re building',
     features: [
       ['Activity discovery', 'A way to find play ideas by age, available time, and materials you already have.'],
       ['Development observations', 'A private way to note what you notice as your child grows, without scores or comparisons.'],
     ],
-    limits: 'Educational use', limitText: 'This preview contains no activity instructions or developmental checklists. Play & Grow is intended for general education, not screening, diagnosis, or treatment. For individual concerns, speak with a qualified healthcare professional.',
+    limits: 'Educational use', limitText: 'This preview contains no activity instructions or developmental checklists. GrowthFun is intended for general education, not screening, diagnosis, or treatment. For individual concerns, speak with a qualified healthcare professional.',
     privacy: 'Privacy', privacyText: 'This site has no accounts, forms, analytics, or app storage. It does not ask for or collect family information. The hosting provider may log technical request data such as IP addresses for operation and security.',
     footer: 'Informational preview · The application is not publicly available.',
   },
   'zh-Hans': {
     skip: '跳到主要内容', languages: '语言', status: '开发中 · 项目预览',
     title: '一起玩，', accent: '陪伴成长。',
-    intro: 'Play & Grow 正在开发中，面向照护出生至 5 岁孩子的家长和照护者。',
-    description: '为家长和照护者规划的双语游戏与成长陪伴工具。此页仅介绍项目，并非应用。',
-    cta: '了解开发计划', figure: 'PLAY & GROW · 成长笔记',
+    intro: 'GrowthFun 正在开发中，面向照护出生至 5 岁孩子的家长和照护者。',
+    description: 'GrowthFun 是为家长和照护者规划的双语游戏与成长陪伴工具。此页仅介绍项目，并非应用。',
+    cta: '了解开发计划', figure: 'GrowthFun · 成长笔记',
     plans: '我们正在开发什么',
     features: [
       ['发现游戏灵感', '按孩子的年龄、手头的材料和可用时间寻找游戏点子。'],
       ['记录发育观察', '私下记录孩子成长中的点滴，不评分，也不做比较。'],
     ],
-    limits: '教育用途说明', limitText: '本预览不提供游戏步骤或发育检查清单。Play & Grow 仅供一般教育参考，不用于筛查、诊断或治疗。如有个别发育疑虑，请咨询有资质的医疗专业人员。',
+    limits: '教育用途说明', limitText: '本预览不提供游戏步骤或发育检查清单。GrowthFun 仅供一般教育参考，不用于筛查、诊断或治疗。如有个别发育疑虑，请咨询有资质的医疗专业人员。',
     privacy: '隐私', privacyText: '本网站不设账号或表单，不使用分析工具或应用存储，也不要求提供或收集家庭信息。托管服务商可能出于运行与安全目的记录 IP 地址等技术请求数据。',
     footer: '仅供了解项目 · 应用尚未公开开放。',
   },
@@ -65,7 +65,10 @@ function page(locale, base) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="referrer" content="no-referrer">
   <meta name="description" content="${t.description}">
-  <title>Play &amp; Grow · ${t.status}</title>
+  <meta property="og:site_name" content="GrowthFun">
+  <meta property="og:title" content="GrowthFun · ${t.status}">
+  <meta property="og:description" content="${t.description}">
+  <title>GrowthFun · ${t.status}</title>
   <link rel="icon" type="image/svg+xml" href="${base}icon.svg">
   <link rel="stylesheet" href="${base}site.css">
   <link rel="alternate" hreflang="en" href="${base}en/">
@@ -74,7 +77,7 @@ function page(locale, base) {
 <body>
   <a class="skip" href="#main">${t.skip}</a>
   <header class="site-head"><div class="wrap head-inner">
-    <a class="brand" href="${base}${locale}/" aria-label="Play &amp; Grow"><img src="${base}icon.svg" width="38" height="38" alt=""><span>Play <i>&amp;</i> Grow</span></a>
+    <a class="brand" href="${base}${locale}/"><img src="${base}icon.svg" width="38" height="38" alt=""><span>GrowthFun</span></a>
     <nav class="languages" aria-label="${t.languages}">
       <a lang="en" hreflang="en" href="${base}en/"${locale === 'en' ? ' aria-current="page"' : ''}>English</a>
       <a lang="zh-Hans" hreflang="zh-Hans" href="${base}zh-Hans/"${locale === 'zh-Hans' ? ' aria-current="page"' : ''}>简体中文</a>
@@ -101,12 +104,12 @@ function page(locale, base) {
       <section aria-labelledby="privacy"><h2 id="privacy">${t.privacy}</h2><p>${t.privacyText}</p></section>
     </div>
   </main>
-  <footer><div class="wrap footer-inner"><b>Play &amp; Grow</b><p>${t.footer}</p></div></footer>
+  <footer><div class="wrap footer-inner"><b>GrowthFun</b><p>${t.footer}</p></div></footer>
 </body>
 </html>\n`;
 }
 
-const notFound = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="${csp}"><meta name="viewport" content="width=device-width"><meta name="robots" content="noindex"><title>Page not found · Play &amp; Grow</title></head><body><main><h1>Page not found</h1><p>This page is not part of the Play &amp; Grow informational preview.</p><p lang="zh-Hans">找不到页面。此页面不属于 Play &amp; Grow 项目预览。</p></main></body></html>\n`;
+const notFound = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="${csp}"><meta name="viewport" content="width=device-width"><meta name="robots" content="noindex"><title>Page not found · GrowthFun</title></head><body><main><h1>Page not found</h1><p>This page is not part of the GrowthFun informational preview.</p><p lang="zh-Hans">找不到页面。此页面不属于 GrowthFun 项目预览。</p></main></body></html>\n`;
 const render = (file, locale) => page(locale, file === 'index.html' ? './' : '../');
 
 async function inventory(target) {

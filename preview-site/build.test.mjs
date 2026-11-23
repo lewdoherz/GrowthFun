@@ -20,6 +20,10 @@ test('both languages and all resources resolve under the repository prefix', asy
   for (const [page, lang] of [['', 'en'], ['en/', 'en'], ['zh-Hans/', 'zh-Hans']]) {
     const html = await readFile(join(target, page, 'index.html'), 'utf8');
     assert.match(html, new RegExp(`<html lang="${lang}">`, 'u'));
+    assert.match(html, /<title>GrowthFun · /u);
+    assert.match(html, /<meta property="og:site_name" content="GrowthFun">/u);
+    assert.match(html, /<span>GrowthFun<\/span>/u);
+    assert.doesNotMatch(html, /play\s*(?:&amp;|&|and)\s*grow|play-?and-?grow/iu);
     assert.match(html, lang === 'en' ? /The application is not publicly available/u : /应用尚未公开开放/u);
     assert.doesNotMatch(html, /<(?:script|iframe|form|input)\b|data:|\b(?:app|catalog|incoming)\//iu);
     for (const [, path] of html.matchAll(/(?:src|href)="([^"]+)"/gu)) {

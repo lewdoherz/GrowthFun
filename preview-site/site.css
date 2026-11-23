@@ -25,7 +25,6 @@ a:focus-visible { outline: 3px solid #85513d; outline-offset: 4px; }
 .head-inner { display: flex; align-items: center; justify-content: space-between; min-height: 4.5rem; gap: .5rem 1.25rem; flex-wrap: wrap; }
 .brand { display: inline-flex; align-items: center; gap: .6rem; min-height: 44px; color: var(--forest); font: 650 clamp(1.18rem, 2.5vw, 1.63rem)/1.1 'Fraunces Field', Georgia, serif; text-decoration: none; letter-spacing: -.05em; }
 .brand img { border-radius: .68rem; flex: 0 0 auto; }
-.brand i { font-style: normal; color: var(--accent); }
 .languages { display: flex; gap: .45rem 1rem; flex-wrap: wrap; }
 .languages a { display: inline-flex; align-items: center; min-height: 44px; font-size: .9rem; font-weight: 650; text-underline-offset: .32em; text-decoration-thickness: 1px; }
 .languages a[aria-current] { text-decoration: none; }
